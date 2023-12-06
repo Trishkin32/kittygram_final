@@ -16,7 +16,7 @@ services:
     image: lichen32/kittygram_backend
     env_file: .env
     volumes:
-      - static:/backend_static/
+      - static:/backend_static
       - media:/app/media/
     depends_on:
       - db
@@ -24,9 +24,9 @@ services:
   frontend:
     env_file: .env
     image: lichen32/kittygram_frontend
-    command: cp -r /app/build/. /static/
+    command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/static
+      - static:/frontend_static
 
   gateway:
     image: lichen32/kittygram_gateway
