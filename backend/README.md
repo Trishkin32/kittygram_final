@@ -47,3 +47,4 @@ docker compose stop && docker compose up --build
 
 ### Автор
 Владислав Т
+https://github.com/Trishkin32
