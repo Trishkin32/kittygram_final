@@ -1,51 +1,49 @@
-### Как запустить проект:
+# kittygram_final
+Социальная сеть для обмена фотографиями любимых питомцев. Котограм воплоти!
 
-Клонировать репозиторий и перейти в него в командной строке:
+# Kittygram
+### Описание
+Сайт - на котором вы можете лицезреть замечательных котиков. Но это не всё! Вы можете добавить своих котиков и рассказать о них подробнее. Например, можно указать кличку, цвет окраса и даже фото вашего питомца! Покажи котейку миру!
 
+### Технологии
+Python 3.9 
+Django 3.2.3
+
+### Запуск проекта в dev-режиме
+- Выпоните клонирование кода приложения с GitHub:
 ```
-git clone https://github.com/yandex-praktikum/kittygram_backend.git
+git clone git@github.com:Ваш_аккаунт/kittygram_final.git
 ```
-
+- Перейдите в директорию backend-приложения проекта:
 ```
-cd kittygram_backend
+cd kittygram_final/backend/
 ```
-
-Cоздать и активировать виртуальное окружение:
-
+- Установите и активируйте виртуальное окружение:
 ```
-python3 -m venv env
+python3 -m venv venv
 ```
-
-* Если у вас Linux/macOS
-
-    ```
-    source env/bin/activate
-    ```
-
-* Если у вас windows
-
-    ```
-    source env/scripts/activate
-    ```
-
 ```
-python3 -m pip install --upgrade pip
+source venv/bin/activate
 ```
-
-Установить зависимости из файла requirements.txt:
-
+- Установите зависимости из файла requirements.txt:
 ```
 pip install -r requirements.txt
 ```
-
-Выполнить миграции:
-
+- Выполните миграции:
 ```
-python3 manage.py migrate
+python manage.py migrate
 ```
 
-Запустить проект:
+- Выполните автоматический запуск по инструкции, использовав Docker Compose, из директории, где находится файл docker-copmose.yml:
+- Запуск Docker Compose:
+```
+docker compose up 
+```
+- Перезапустить Docker Compose после изменений можно так:
+```
+docker compose stop && docker compose up --build 
+```
 
-```
-python3 manage.py runserver
-```
+
+### Автор
+Владислав Т
