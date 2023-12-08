@@ -18,7 +18,7 @@
 ```
     
 
-3. Наполните файл env.for_dev своими данными.
+3. Наполните файл .env своими данными.
 
 4. Разверните проект:
 ```
@@ -192,10 +192,13 @@ bash nginx: configuration file /etc/nginx/nginx.conf test is successful
 ### Настройка CI/CD
 
 1. Файл workflow уже написан. Он находится в директории
+```
     kittygram/.github/workflows/main.yml
+```
     
 
-2. Для адаптации его на своем сервере добавьте секреты в GitHub Actions:
+3. Для адаптации его на своем сервере добавьте секреты в GitHub Actions:
+```
     DOCKER_USERNAME                # имя пользователя в DockerHub
     DOCKER_PASSWORD                # пароль пользователя в DockerHub
 
@@ -210,6 +213,7 @@ bash nginx: configuration file /etc/nginx/nginx.conf test is successful
 
     TELEGRAM_TO                    # id телеграм-аккаунта (можно узнать у @userinfobot, команда /start)
     TELEGRAM_TOKEN                 # токен бота (получить токен можно у @BotFather, /token, имя бота)
+```
     
 
 ### Запросы к API
